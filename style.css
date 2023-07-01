@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family:  "Source serif Pro";
+  font-size: 62.5%;
+}
+
+body {
+  color: #A54328;
+}
+
+/*Aqui vamos centralizar a nossa caixa main. Aqui vamos deixar o tamanho para o formato mobile*/
+main{ 
+  max-width: 32rem;
+  margin-inline: auto;
+  padding: 5.6rem 4rem;
+
+  box-sizing: content-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+img{
+  width: 100%;
+  margin-block: 3.2rem;
+}
+
+button {
+  font-family: "Source serif 4" ;
+  background-color: #A54328;
+
+  color: #ffffff;
+  border: 0;
+  padding: .8rem 1.2rem ;
+  border-radius: .6rem;
+  margin-top: 3.2rem;
+
+}
+
+h1, h2 {
+  font-size: 2.8rem;
+  line-height: 3.6rem;
+}
+
+h2{
+  margin-bottom: 3.2rem;
+}
+
+p, li, strong {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}
+
+ul, ol {
+  padding-left: 2.4rem;
+}
+
+ul {
+  margin-bottom: 2.4rem;
+}
+
+
+
+@media (min-width: 1120px){
+  
+  /* 1ª forma
+  main{
+    flex-direction: row;
+    max-width: 100%;
+    gap: 16rem;
+  }
+  Sinal de maior > significa filho-direto do elemento. Seleciona todos os filhos-diretos do elemento. 
+  main > div{  
+    flex: 1;
+    max-width: 50rem;
+
+  }
+}*/
+
+/* 2ª forma*/
+main{
+
+    flex-direction: row;
+    max-width: fit-content; /*permite que se defina uma largura máxima permitida para o tamanho de um elemento*/
+    gap: 16rem;
+
+    padding: 9rem, 6rem;
+  }
+  .recipe {
+    max-width: 43.5rem;
+  }
+
+  .ingredients {
+    max-width: 52.5rem;
+  }
+
+  h1, h2 {
+    font-size: 4rem;
+    line-height: 5rem
+  }
+  p, li, strong{
+    font-size:2rem;
+    line-height: 2.5rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
+
